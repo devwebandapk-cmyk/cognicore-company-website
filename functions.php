@@ -19,11 +19,11 @@ function cognicore_address_lines() {
 /** Licensed business activities (edit here). */
 function cognicore_activities() {
 	return array(
-		array( 'Computers, Peripherals & Software', 'Wholesale of computers, computer peripheral equipment and software.' ),
-		array( 'General Trading', 'General trading across a wide range of goods.' ),
-		array( 'Used Electrical & Electronic Appliances', 'Trading of used electrical and electronic appliances and equipment.' ),
-		array( 'E-Commerce', 'Online trading and e-commerce operations.' ),
-		array( 'Systems & Communication Software Design', 'Computer systems and communication equipment software design.' ),
+		array( 'Wholesale Technology Supply', 'Bulk supply of computers, peripherals and software to resellers, enterprises and institutions.' ),
+		array( 'General Trading', 'Sourcing and distribution of a broad portfolio of goods, tailored to each client\'s requirements.' ),
+		array( 'Pre-Owned Electronics', 'Cost-effective trade in pre-owned electrical and electronic appliances, extending the working life of quality equipment.' ),
+		array( 'Digital Commerce', 'Online storefronts and sales channels that bring our products to customers wherever they are.' ),
+		array( 'Systems & Communications Software', 'Software designed for computer systems and communication equipment, built for performance and seamless integration.' ),
 	);
 }
 
@@ -55,8 +55,8 @@ add_action( 'wp_enqueue_scripts', function () {
 add_action( 'after_switch_theme', function () {
 	$pages = array(
 		'home'     => array( 'Home', "Welcome to Cognicore Technologies." ),
-		'about'    => array( 'About', "<p>Cognicore Technologies DWC-LLC is a Dubai World Central based company engaged in the wholesale of computers, peripherals and software, general trading, e-commerce and software design. Replace this text with your company story.</p><h2>Our mission</h2><p>Describe your mission and values here.</p>" ),
-		'services' => array( 'Services', "<p>Our licensed business activities are listed below.</p>" ),
+		'about'    => array( 'About', "<p>Cognicore Technologies DWC-LLC combines technology supply, general trading and digital commerce under one roof. Replace this text with your company story.</p><h2>Our mission</h2><p>Describe your mission and values here.</p>" ),
+		'services' => array( 'Services', "" ),
 		'contact'  => array( 'Contact', "<p>Tell us about your project and we'll get back to you.</p>[cognicore_contact_form]" ),
 	);
 	$ids = array();

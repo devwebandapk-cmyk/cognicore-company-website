@@ -1,7 +1,10 @@
 <?php get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 <section class="page-header"><div class="container"><h1><?php the_title(); ?></h1></div></section>
-<section class="page-content"><div class="container"><?php the_content(); ?>
+<section class="page-content"><div class="container">
+	<?php if ( is_page( 'services' ) ) : ?>
+		<p class="lead">From hardware supply to software design, here is how we can support your business.</p>
+	<?php else : the_content(); endif; ?>
 	<?php if ( is_page( 'services' ) ) : ?>
 		<div class="grid">
 			<?php foreach ( cognicore_activities() as $a ) : ?>

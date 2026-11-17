@@ -2,7 +2,7 @@
 <section class="hero">
 	<div class="container">
 		<h1>Technology that moves your business forward.</h1>
-		<p>Cognicore Technologies DWC-LLC supplies computers, peripherals and software, and runs general trading and e-commerce operations.</p>
+		<p>From hardware supply to software design, we connect businesses with the technology and products they need to grow.</p>
 		<a class="btn" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Get in touch</a>
 		<a class="btn btn-ghost" href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Our activities</a>
 	</div>
@@ -11,7 +11,7 @@
 <section class="section">
 	<div class="container">
 		<h2>What we do</h2>
-		<p class="lead">Our licensed business activities.</p>
+		<p class="lead">Five areas of expertise, one dependable partner.</p>
 		<div class="grid">
 			<?php foreach ( cognicore_activities() as $a ) : ?>
 				<div class="card"><h3><?php echo esc_html( $a[0] ); ?></h3><p><?php echo esc_html( $a[1] ); ?></p></div>
@@ -23,11 +23,11 @@
 <section class="section alt">
 	<div class="container">
 		<h2>Why Cognicore</h2>
-		<p class="lead">Dependable supply, clear communication and a focus on quality.</p>
+		<p class="lead">Consistent supply, open communication and uncompromising standards.</p>
 		<div class="grid">
-			<div class="card"><h3>Reliable</h3><p>Dependable sourcing and delivery.</p></div>
-			<div class="card"><h3>Transparent</h3><p>Clear timelines and regular updates.</p></div>
-			<div class="card"><h3>Wide range</h3><p>Hardware, software and general trading under one roof.</p></div>
+			<div class="card"><h3>Dependable</h3><p>Consistent sourcing and on-time delivery.</p></div>
+			<div class="card"><h3>Transparent</h3><p>Straightforward terms and regular updates.</p></div>
+			<div class="card"><h3>Versatile</h3><p>Hardware, software and trading expertise in one place.</p></div>
 		</div>
 	</div>
 </section>
