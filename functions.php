@@ -24,7 +24,6 @@ function cognicore_activities() {
 		array( 'IT & Software Consultancy', 'Expert guidance on technology strategy, system selection and software architecture, so you invest in the right solution from the start.' ),
 		array( 'Hardware Distribution', 'Printers, scanners, POS terminals, barcode scanners and related peripherals for retailers and enterprises.' ),
 		array( 'Digital Signage', 'Smart displays for supermarkets and parking facilities: advertising, live price boards, guidance and information screens.' ),
-		array( 'Pre-Owned Electronics Export', 'Export of quality pre-owned devices to growing markets in Africa.' ),
 		array( 'General Trading', 'Sourcing and distribution of a broad portfolio of goods, tailored to client requirements.' ),
 	);
 }
