@@ -44,7 +44,7 @@ function cognicore_activities() {
 }
 
 function cognicore_maps_url() {
-	return 'https://www.google.com/maps/search/?api=1&query=' . rawurlencode( 'Dubai South Business Park Building A3 Dubai' );
+	return 'https://www.google.com/maps/search/?api=1&query=' . rawurlencode( 'Dubai South Business Hub Free Zone – Business Setup Services in Dubai, UAE' );
 }
 
 function cognicore_address_html() {
