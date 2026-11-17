@@ -10,9 +10,9 @@ define( 'COGNICORE_COMPANY', 'Cognicore Technologies DWC-LLC' );
 /** Company address lines (edit here). */
 function cognicore_address_lines() {
 	return array(
-		'Business Centre',
-		'Floor 3, Building A3',
-		'Business Park',
+		'Business Centre, Floor 3',
+		'Building A3, Dubai South Business Park',
+		'Dubai, United Arab Emirates',
 	);
 }
 
