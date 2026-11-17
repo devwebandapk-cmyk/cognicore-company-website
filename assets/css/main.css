@@ -180,9 +180,24 @@ form input:focus,form textarea:focus{outline:none;border-color:var(--blue);box-s
 @media (max-width:1020px){.ai-grid{grid-template-columns:1fr;gap:36px}}
 @media (max-width:560px){.ai-cards{grid-template-columns:1fr}}
 
+
+/* Contact details + WhatsApp */
+.contact-rows{list-style:none;margin:0 0 16px;padding:0;display:grid;gap:10px}
+.contact-rows li{display:flex;align-items:center;gap:10px;color:#c4cee0}
+.contact-rows .ico{color:var(--cyan)}
+.contact-rows a{color:#e8ecf5}
+.btn-wa{background:#25d366;color:#05250f;box-shadow:0 10px 30px -10px rgba(37,211,102,.7)}
+.btn-wa:hover{background:#2fe173;box-shadow:0 16px 34px -10px rgba(37,211,102,.9)}
+.btn-wa .ico{width:1.3em;height:1.3em}
+.office-card .btn-wa{margin-top:6px}
+.cta-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:70;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#05250f;box-shadow:0 14px 34px -8px rgba(37,211,102,.75);transition:transform .2s}
+.wa-float:hover{transform:scale(1.08);text-decoration:none}
+.wa-float .ico{width:30px;height:30px}
+
 /* Footer */
 .site-footer{border-top:1px solid var(--border);background:var(--bg2);padding:70px 0 0}
-.foot-grid{display:grid;grid-template-columns:1.3fr .8fr 1.2fr;gap:48px}
+.foot-grid{display:grid;grid-template-columns:1.3fr .7fr 1.1fr 1.2fr;gap:40px}
 .brand-foot{margin-bottom:16px}
 .foot-tag{color:var(--muted);max-width:340px;margin:0}
 .site-footer h4{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
@@ -210,6 +225,7 @@ address strong{color:var(--text)}
   .steps,.industry{grid-template-columns:repeat(2,1fr)}
   .steps li:after{display:none}
   .contact-grid,.foot-grid{grid-template-columns:1fr}
+  .foot-grid{gap:34px}
 }
 @media (max-width:780px){
   .nav-toggle{display:block}
@@ -225,3 +241,4 @@ address strong{color:var(--text)}
   .f2{left:0}
   .skyline{height:90px}
 }
+.office-card .contact-rows{margin-top:18px}

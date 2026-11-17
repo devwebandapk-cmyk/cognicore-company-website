@@ -93,7 +93,10 @@
 		<div class="cta reveal">
 			<h2>Ready to build your next solution?</h2>
 			<p>Tell us what you need. We'll respond with a clear plan.</p>
-			<a class="btn btn-light" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Contact us <?php echo cognicore_icon( 'arrow' ); ?></a>
+			<div class="cta-actions">
+				<a class="btn btn-light" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Contact us <?php echo cognicore_icon( 'arrow' ); ?></a>
+				<?php echo cognicore_whatsapp_button(); ?>
+			</div>
 		</div>
 	</div>
 </section>

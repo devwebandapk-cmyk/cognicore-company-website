@@ -13,6 +13,14 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'foot-menu', 'depth' => 1, 'fallback_cb' => false ) ); ?>
 		</div>
 		<div>
+			<h4>Contact</h4>
+			<?php echo cognicore_contact_rows(); ?>
+			<?php echo cognicore_whatsapp_button( 'Chat on WhatsApp', 'btn btn-wa btn-sm' ); ?>
+			<?php if ( ! cognicore_contact( 'phone' ) && ! cognicore_contact( 'email' ) && ! cognicore_wa_url() ) : ?>
+				<a class="link-arrow" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Send us a message <?php echo cognicore_icon( 'arrow' ); ?></a>
+			<?php endif; ?>
+		</div>
+		<div>
 			<h4>Visit us</h4>
 			<address>
 				<strong><?php echo esc_html( COGNICORE_COMPANY ); ?></strong><br>
@@ -26,6 +34,9 @@
 		<a href="#top">Back to top &uarr;</a>
 	</div>
 </footer>
+<?php if ( cognicore_wa_url() && (int) cognicore_contact( 'wa_floating' ) ) : ?>
+<a class="wa-float" href="<?php echo esc_url( cognicore_wa_url() ); ?>" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><?php echo cognicore_icon( 'whatsapp' ); ?></a>
+<?php endif; ?>
 <?php wp_footer(); ?>
 </body>
 </html>

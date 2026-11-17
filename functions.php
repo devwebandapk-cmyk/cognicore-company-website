@@ -6,6 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 define( 'COGNICORE_VERSION', '1.0.0' );
 define( 'COGNICORE_COMPANY', 'Cognicore Technologies DWC-LLC' );
+require_once get_template_directory() . '/inc/contact.php';
 
 /** Company address lines (edit here). */
 function cognicore_address_lines() {
@@ -25,6 +26,9 @@ function cognicore_icon( $name ) {
 		'printer' => '<path d="M7 8V3h10v5M7 17H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M7 14h10v7H7z"/>',
 		'screen'  => '<rect x="2.5" y="4" width="19" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>',
 		'box'     => '<path d="M21 8 12 3 3 8v8l9 5 9-5V8zM3.3 7.5 12 12.5l8.7-5M12 12.5V22"/>',
+		'phone'    => '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>',
+		'mail'     => '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+		'whatsapp' => '<path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M9.2 8.6c0 3.3 2.9 6.2 6.2 6.2l1-1.4-1.9-.9-.9.8a3.8 3.8 0 0 1-1.9-1.9l.8-.9-.9-1.9z" fill="currentColor" stroke="none"/>',
 		'spark'   => '<path d="m12 3 1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="m19 15 .8 2.2 2.2.8-2.2.8L19 21l-.8-2.2-2.2-.8 2.2-.8z"/>',
 		'bolt'    => '<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>',
 		'chart'   => '<path d="M3 3v18h18"/><path d="m7 15 4-5 3 3 5-7"/>',
@@ -93,7 +97,7 @@ function cognicore_address_html() {
 }
 
 add_shortcode( 'cognicore_address', function () {
-	return '<div class="office-card"><h3>' . esc_html( COGNICORE_COMPANY ) . '</h3><p>' . implode( '<br>', array_map( 'esc_html', cognicore_address_lines() ) ) . '</p><a class="link-arrow" href="' . esc_url( cognicore_maps_url() ) . '" target="_blank" rel="noopener">Open in Maps ' . cognicore_icon( 'arrow' ) . '</a></div>';
+	return '<div class="office-card"><h3>' . esc_html( COGNICORE_COMPANY ) . '</h3><p>' . implode( '<br>', array_map( 'esc_html', cognicore_address_lines() ) ) . '</p><a class="link-arrow" href="' . esc_url( cognicore_maps_url() ) . '" target="_blank" rel="noopener">Open in Maps ' . cognicore_icon( 'arrow' ) . '</a>' . cognicore_contact_rows() . cognicore_whatsapp_button() . '</div>';
 } );
 
 add_action( 'after_setup_theme', function () {
@@ -190,8 +194,9 @@ function cognicore_handle_contact() {
 	$message = sanitize_textarea_field( wp_unslash( $_POST['message'] ?? '' ) );
 	$ok      = false;
 	if ( $name && is_email( $email ) && $message ) {
+		$to = is_email( cognicore_contact( 'email' ) ) ? cognicore_contact( 'email' ) : get_option( 'admin_email' );
 		$ok = wp_mail(
-			get_option( 'admin_email' ),
+			$to,
 			'New contact message from ' . $name,
 			$message . "\n\nFrom: $name <$email>",
 			array( 'Reply-To: ' . $name . ' <' . $email . '>' )
