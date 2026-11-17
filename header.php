@@ -9,7 +9,7 @@
 <?php wp_body_open(); ?>
 <header class="site-header">
 	<div class="container">
-		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">Cognicore <span>Technology</span></a>
+		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">Cognicore <span>Technologies</span></a>
 		<button class="nav-toggle" aria-label="Menu">&#9776;</button>
 		<?php
 		wp_nav_menu( array(

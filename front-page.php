@@ -2,7 +2,7 @@
 <section class="hero">
 	<div class="container">
 		<h1>Technology that moves your business forward.</h1>
-		<p>Cognicore Technology designs and builds modern software, web platforms and digital solutions for growing companies.</p>
+		<p>Cognicore Technologies designs and builds modern software, web platforms and digital solutions for growing companies.</p>
 		<a class="btn" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Get in touch</a>
 		<a class="btn btn-ghost" href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Our services</a>
 	</div>

@@ -5,6 +5,24 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 define( 'COGNICORE_VERSION', '1.0.0' );
+define( 'COGNICORE_COMPANY', 'Cognicore Technologies DWC-LLC' );
+
+/** Company address lines (edit here). */
+function cognicore_address_lines() {
+	return array(
+		'Business Centre',
+		'Floor 3, Building A3',
+		'Business Park',
+	);
+}
+
+function cognicore_address_html() {
+	return esc_html( implode( ', ', cognicore_address_lines() ) );
+}
+
+add_shortcode( 'cognicore_address', function () {
+	return '<p><strong>' . esc_html( COGNICORE_COMPANY ) . '</strong><br>' . implode( '<br>', array_map( 'esc_html', cognicore_address_lines() ) ) . '</p>';
+} );
 
 add_action( 'after_setup_theme', function () {
 	add_theme_support( 'title-tag' );
@@ -25,8 +43,8 @@ add_action( 'wp_enqueue_scripts', function () {
  */
 add_action( 'after_switch_theme', function () {
 	$pages = array(
-		'home'     => array( 'Home', "Welcome to Cognicore Technology." ),
-		'about'    => array( 'About', "<p>Cognicore Technology builds reliable, modern software for growing businesses. Replace this text with your company story.</p><h2>Our mission</h2><p>Describe your mission and values here.</p>" ),
+		'home'     => array( 'Home', "Welcome to Cognicore Technologies." ),
+		'about'    => array( 'About', "<p>Cognicore Technologies DWC-LLC builds reliable, modern software for growing businesses. Replace this text with your company story.</p><h2>Our mission</h2><p>Describe your mission and values here.</p>" ),
 		'services' => array( 'Services', "<p>Describe the services you offer in more detail here.</p>" ),
 		'contact'  => array( 'Contact', "<p>Tell us about your project and we'll get back to you.</p>[cognicore_contact_form]" ),
 	);
