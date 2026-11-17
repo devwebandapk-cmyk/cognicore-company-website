@@ -162,6 +162,24 @@ form input:focus,form textarea:focus{outline:none;border-color:var(--blue);box-s
 .about-cta{margin-top:90px}
 @media (max-width:1020px){.about-grid,.duo{grid-template-columns:1fr}.glance{position:static}}
 
+
+/* AI section */
+.ai-section{background:radial-gradient(700px 360px at 90% 10%,rgba(139,92,246,.22),transparent 60%),radial-gradient(600px 320px at 0% 90%,rgba(34,211,238,.14),transparent 60%),var(--bg)}
+.ai-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#cfe7ff;padding:7px 14px;border-radius:999px;border:1px solid var(--border-h);background:rgba(59,130,246,.14)}
+.badge .ico{color:var(--cyan);width:1.1em;height:1.1em}
+.ai-h{font-size:clamp(1.9rem,3.4vw,2.8rem);margin:18px 0 6px}
+.ticks{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:12px;color:#cdd6e6}
+.ticks li{position:relative;padding-left:30px}
+.ticks li:before{content:"";position:absolute;left:0;top:.45em;width:16px;height:16px;border-radius:50%;background:var(--grad);-webkit-mask:radial-gradient(circle at 50% 50%,transparent 4px,#000 5px);mask:radial-gradient(circle at 50% 50%,transparent 4px,#000 5px)}
+.ai-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.ai-cards .tile{padding:26px}
+.ai-cards .tile h3{font-size:1.1rem}
+.ai-cards .tile p{font-size:.94rem}
+.chip-ai{background:var(--grad)!important;border-color:transparent!important;color:#fff!important;font-weight:600}
+@media (max-width:1020px){.ai-grid{grid-template-columns:1fr;gap:36px}}
+@media (max-width:560px){.ai-cards{grid-template-columns:1fr}}
+
 /* Footer */
 .site-footer{border-top:1px solid var(--border);background:var(--bg2);padding:70px 0 0}
 .foot-grid{display:grid;grid-template-columns:1.3fr .8fr 1.2fr;gap:48px}

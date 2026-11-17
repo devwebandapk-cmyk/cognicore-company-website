@@ -22,7 +22,7 @@
 				<h2 class="about-h">One partner for the software <span class="grad">and the hardware it runs on.</span></h2>
 				<div class="prose">
 					<p>Cognicore Technologies DWC-LLC is a Dubai-based solution provider that brings software and hardware together. Too often, businesses buy equipment from one supplier, software from another, and are left to make the two work side by side. We close that gap.</p>
-					<p>We develop custom software, including retail billing, procurement management, service and facility management systems and e-commerce platforms, and we supply the hardware around it: POS terminals, printers, scanners, barcode readers and digital signage. Our consultancy team helps you choose the right approach before a single line of code is written.</p>
+					<p>We develop custom software, including retail billing, procurement management, service and facility management systems and e-commerce platforms, and we supply the hardware around it: POS terminals, printers, scanners, barcode readers and digital signage. We also build custom AI tools into that software, from automated workflows to predictive insights and intelligent assistants, so it works harder for your staff and your customers. Our consultancy team helps you choose the right approach before a single line of code is written.</p>
 					<p>From our base in Dubai South, we design solutions for retailers, facility operators and enterprises, and stay beside them long after go-live.</p>
 				</div>
 			</div>
@@ -32,13 +32,13 @@
 					<div><dt>Company</dt><dd><?php echo esc_html( COGNICORE_COMPANY ); ?></dd></div>
 					<div><dt>Headquarters</dt><dd>Dubai South Business Park, Dubai, UAE</dd></div>
 					<div><dt>Focus</dt><dd>Software, hardware and consultancy</dd></div>
-					<div><dt>Capabilities</dt><dd>Custom software &middot; IT consultancy &middot; POS &amp; peripherals &middot; Digital signage &middot; General trading</dd></div>
+					<div><dt>Capabilities</dt><dd>AI-powered software &middot; IT consultancy &middot; POS &amp; peripherals &middot; Digital signage &middot; General trading</dd></div>
 				</dl>
 			</aside>
 		</div>
 
 		<div class="duo">
-			<div class="tile reveal"><span class="eyebrow">Mission</span><h3>Make technology simple to adopt.</h3><p>We deliver software and hardware as one dependable solution, so our clients spend their time running their business instead of coordinating suppliers.</p></div>
+			<div class="tile reveal"><span class="eyebrow">Mission</span><h3>Make technology simple to adopt.</h3><p>We deliver intelligent software and hardware as one dependable solution, so our clients spend their time running their business instead of coordinating suppliers.</p></div>
 			<div class="tile reveal"><span class="eyebrow">Vision</span><h3>The trusted partner for complete solutions.</h3><p>We aim to be the first call for businesses that want technology designed, supplied and supported by a single accountable team.</p></div>
 		</div>
 
@@ -71,5 +71,6 @@
 	<?php endif; ?>
 	</div>
 </section>
+<?php if ( is_page( 'services' ) ) { cognicore_ai_section(); } ?>
 <?php endwhile; ?>
 <?php get_footer(); ?>

@@ -5,14 +5,14 @@
 	<div class="container hero-grid">
 		<div class="hero-copy">
 			<span class="eyebrow"><?php echo cognicore_icon( 'pin' ); ?> Dubai South &middot; United Arab Emirates</span>
-			<h1>Complete technology solutions, <span class="grad">from software to hardware.</span></h1>
-			<p class="hero-sub">We advise, develop and deliver: custom software together with the hardware it runs on, so you have one dependable partner from design to deployment.</p>
+			<h1>AI-powered solutions, <span class="grad">from software to hardware.</span></h1>
+			<p class="hero-sub">We build custom software with intelligent AI tools built in, and supply the hardware it runs on, so your operations run smarter and your people work faster.</p>
 			<div class="hero-cta">
 				<a class="btn" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Start a project <?php echo cognicore_icon( 'arrow' ); ?></a>
 				<a class="btn btn-ghost" href="#solutions">Explore solutions</a>
 			</div>
 			<ul class="chips" aria-label="Focus areas">
-				<li>Retail Billing</li><li>Procurement</li><li>Facility Management</li><li>E-Commerce</li><li>POS &amp; Barcode</li><li>Digital Signage</li>
+				<li class="chip-ai">AI-Powered</li><li>Retail Billing</li><li>Procurement</li><li>Facility Management</li><li>E-Commerce</li><li>POS &amp; Barcode</li><li>Digital Signage</li>
 			</ul>
 		</div>
 
@@ -29,7 +29,7 @@
 				<div class="sign"><div class="sign-a"></div><div class="sign-b"></div><div class="sign-c"></div></div>
 			</div>
 			<div class="float f1"><?php echo cognicore_icon( 'printer' ); ?><span>POS &amp; Peripherals</span></div>
-			<div class="float f2"><?php echo cognicore_icon( 'code' ); ?><span>Custom Software</span></div>
+			<div class="float f2"><?php echo cognicore_icon( 'spark' ); ?><span>AI-Enhanced Software</span></div>
 		</div>
 	</div>
 	<svg class="skyline" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
@@ -42,7 +42,7 @@
 		<div class="head reveal">
 			<span class="eyebrow">What we do</span>
 			<h2>Everything under one roof, <span class="grad">from advice to deployment.</span></h2>
-			<p class="lead">Six capabilities that work on their own or come together as a single, fully managed solution.</p>
+			<p class="lead">Six capabilities that work on their own or come together as a single, fully managed solution, with AI woven through the software we build.</p>
 		</div>
 		<div class="bento">
 			<?php foreach ( cognicore_activities() as $a ) : ?>
@@ -55,6 +55,8 @@
 		</div>
 	</div>
 </section>
+
+<?php cognicore_ai_section(); ?>
 
 <section class="section section-alt">
 	<div class="container">

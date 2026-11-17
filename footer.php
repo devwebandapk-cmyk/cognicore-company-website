@@ -6,7 +6,7 @@
 				<svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 28 9v14L16 30 4 23V9z" fill="none" stroke="#3b82f6" stroke-width="2.2"/><circle cx="16" cy="16" r="4.2" fill="#22d3ee"/></svg>
 				<span class="wordmark">Cognicore<small>Technologies</small></span>
 			</div>
-			<p class="foot-tag">Software and hardware, delivered as one complete solution.</p>
+			<p class="foot-tag">AI-powered software and hardware, delivered as one complete solution.</p>
 		</div>
 		<div>
 			<h4>Explore</h4>

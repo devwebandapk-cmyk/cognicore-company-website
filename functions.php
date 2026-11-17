@@ -25,6 +25,11 @@ function cognicore_icon( $name ) {
 		'printer' => '<path d="M7 8V3h10v5M7 17H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M7 14h10v7H7z"/>',
 		'screen'  => '<rect x="2.5" y="4" width="19" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>',
 		'box'     => '<path d="M21 8 12 3 3 8v8l9 5 9-5V8zM3.3 7.5 12 12.5l8.7-5M12 12.5V22"/>',
+		'spark'   => '<path d="m12 3 1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="m19 15 .8 2.2 2.2.8-2.2.8L19 21l-.8-2.2-2.2-.8 2.2-.8z"/>',
+		'bolt'    => '<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>',
+		'chart'   => '<path d="M3 3v18h18"/><path d="m7 15 4-5 3 3 5-7"/>',
+		'chat'    => '<path d="M21 12a8 8 0 0 1-11.5 7.2L3 21l1.8-5.5A8 8 0 1 1 21 12z"/>',
+		'users'   => '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/>',
 		'arrow'   => '<path d="M5 12h14M13 6l6 6-6 6"/>',
 		'pin'     => '<path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/>',
 	);
@@ -34,13 +39,49 @@ function cognicore_icon( $name ) {
 
 function cognicore_activities() {
 	return array(
-		array( 'title' => 'Integrated Solutions', 'icon' => 'layers', 'desc' => 'End-to-end projects that combine custom software with custom-built or carefully selected hardware, delivered and supported by one team.' ),
-		array( 'title' => 'Software Development', 'icon' => 'code', 'desc' => 'Retail billing, procurement management, service and facility management systems, and e-commerce platforms, built around how your business operates.' ),
-		array( 'title' => 'IT & Software Consultancy', 'icon' => 'bulb', 'desc' => 'Expert guidance on technology strategy, system selection and software architecture, so you invest in the right solution from the start.' ),
+		array( 'title' => 'Integrated Solutions', 'icon' => 'layers', 'desc' => 'End-to-end projects that combine custom, AI-enhanced software with custom-built or carefully selected hardware, delivered and supported by one team.' ),
+		array( 'title' => 'Software Development', 'icon' => 'code', 'desc' => 'Retail billing, procurement management, service and facility management systems, and e-commerce platforms, built around how your business operates and enhanced with custom AI tools.' ),
+		array( 'title' => 'IT & Software Consultancy', 'icon' => 'bulb', 'desc' => 'Expert guidance on technology strategy, system selection, software architecture and where AI can add real value, so you invest in the right solution from the start.' ),
 		array( 'title' => 'Hardware Distribution', 'icon' => 'printer', 'desc' => 'Printers, scanners, POS terminals, barcode scanners and related peripherals for retailers and enterprises.' ),
 		array( 'title' => 'Digital Signage', 'icon' => 'screen', 'desc' => 'Smart displays for supermarkets and parking facilities: advertising, live price boards, guidance and information screens.' ),
 		array( 'title' => 'General Trading', 'icon' => 'box', 'desc' => 'Sourcing and distribution of a broad portfolio of goods, tailored to client requirements.' ),
 	);
+}
+
+function cognicore_ai_cards() {
+	return array(
+		array( 'icon' => 'bolt',  'title' => 'Smarter operations', 'desc' => 'Automate repetitive workflows, approvals and reporting so teams spend their time on decisions, not data entry.' ),
+		array( 'icon' => 'chart', 'title' => 'Predictive insights', 'desc' => 'Demand forecasting and stock and procurement planning that turn your own data into clear, timely recommendations.' ),
+		array( 'icon' => 'chat',  'title' => 'Intelligent assistants', 'desc' => 'Natural-language search and assistants built into your system, helping staff and customers find answers in seconds.' ),
+		array( 'icon' => 'users', 'title' => 'Personalised experiences', 'desc' => 'Recommendations and tailored content for online stores and customer-facing screens, shaped by how people actually engage.' ),
+	);
+}
+
+/** Shared "AI inside your software" section (home + services). */
+function cognicore_ai_section() {
+	?>
+	<section class="section ai-section">
+		<div class="container">
+			<div class="ai-grid">
+				<div class="reveal">
+					<span class="badge"><?php echo cognicore_icon( 'spark' ); ?> AI-powered solutions</span>
+					<h2 class="ai-h">Intelligence built into <span class="grad">your software.</span></h2>
+					<p class="lead">AI is now part of how modern businesses compete. We embed custom AI tools directly inside the systems we build, so your operation runs more efficiently and every user, from your staff to your customers, gets more done with less effort.</p>
+					<ul class="ticks">
+						<li>Tailored to your workflows, not a generic add-on</li>
+						<li>Works inside the software and devices you already use</li>
+						<li>Practical gains in speed, accuracy and customer experience</li>
+					</ul>
+				</div>
+				<div class="ai-cards">
+					<?php foreach ( cognicore_ai_cards() as $c ) : ?>
+						<article class="tile reveal"><span class="tile-ico"><?php echo cognicore_icon( $c['icon'] ); ?></span><h3><?php echo esc_html( $c['title'] ); ?></h3><p><?php echo esc_html( $c['desc'] ); ?></p></article>
+					<?php endforeach; ?>
+				</div>
+			</div>
+		</div>
+	</section>
+	<?php
 }
 
 function cognicore_maps_url() {
