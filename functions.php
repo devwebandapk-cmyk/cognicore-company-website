@@ -16,6 +16,17 @@ function cognicore_address_lines() {
 	);
 }
 
+/** Licensed business activities (edit here). */
+function cognicore_activities() {
+	return array(
+		array( 'Computers, Peripherals & Software', 'Wholesale of computers, computer peripheral equipment and software.' ),
+		array( 'General Trading', 'General trading across a wide range of goods.' ),
+		array( 'Used Electrical & Electronic Appliances', 'Trading of used electrical and electronic appliances and equipment.' ),
+		array( 'E-Commerce', 'Online trading and e-commerce operations.' ),
+		array( 'Systems & Communication Software Design', 'Computer systems and communication equipment software design.' ),
+	);
+}
+
 function cognicore_address_html() {
 	return esc_html( implode( ', ', cognicore_address_lines() ) );
 }
@@ -44,8 +55,8 @@ add_action( 'wp_enqueue_scripts', function () {
 add_action( 'after_switch_theme', function () {
 	$pages = array(
 		'home'     => array( 'Home', "Welcome to Cognicore Technologies." ),
-		'about'    => array( 'About', "<p>Cognicore Technologies DWC-LLC builds reliable, modern software for growing businesses. Replace this text with your company story.</p><h2>Our mission</h2><p>Describe your mission and values here.</p>" ),
-		'services' => array( 'Services', "<p>Describe the services you offer in more detail here.</p>" ),
+		'about'    => array( 'About', "<p>Cognicore Technologies DWC-LLC is a Dubai World Central based company engaged in the wholesale of computers, peripherals and software, general trading, e-commerce and software design. Replace this text with your company story.</p><h2>Our mission</h2><p>Describe your mission and values here.</p>" ),
+		'services' => array( 'Services', "<p>Our licensed business activities are listed below.</p>" ),
 		'contact'  => array( 'Contact', "<p>Tell us about your project and we'll get back to you.</p>[cognicore_contact_form]" ),
 	);
 	$ids = array();
