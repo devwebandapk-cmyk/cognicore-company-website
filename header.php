@@ -3,7 +3,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#070b16">
+<meta name="theme-color" content="<?php echo esc_attr( cognicore_color( 'bg' ) ); ?>">
 <script>document.documentElement.classList.add('js');</script>
 <?php wp_head(); ?>
 </head>
@@ -14,7 +14,7 @@
 	<div class="container bar">
 		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Cognicore Technologies">
 			<?php if ( has_custom_logo() ) : the_custom_logo(); else : ?>
-			<svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset=".55" stop-color="#3b82f6"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><path d="M16 2 28 9v14L16 30 4 23V9z" fill="none" stroke="url(#g)" stroke-width="2.2"/><circle cx="16" cy="16" r="4.2" fill="url(#g)"/></svg>
+			<svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--accent2)"/><stop offset=".55" style="stop-color:var(--accent)"/><stop offset="1" style="stop-color:var(--accent3)"/></linearGradient></defs><path d="M16 2 28 9v14L16 30 4 23V9z" fill="none" stroke="url(#g)" stroke-width="2.2"/><circle cx="16" cy="16" r="4.2" fill="url(#g)"/></svg>
 			<span class="wordmark">Cognicore<small>Technologies</small></span>
 			<?php endif; ?>
 		</a>

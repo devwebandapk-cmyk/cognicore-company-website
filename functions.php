@@ -7,6 +7,9 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 define( 'COGNICORE_VERSION', '1.0.0' );
 define( 'COGNICORE_COMPANY', 'Cognicore Technologies DWC-LLC' );
 require_once get_template_directory() . '/inc/contact.php';
+require_once get_template_directory() . '/inc/colors.php';
+require_once get_template_directory() . '/inc/smtp.php';
+require_once get_template_directory() . '/inc/social.php';
 
 /** Company address lines (edit here). */
 function cognicore_address_lines() {
@@ -29,6 +32,12 @@ function cognicore_icon( $name ) {
 		'phone'    => '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>',
 		'mail'     => '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
 		'whatsapp' => '<path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M9.2 8.6c0 3.3 2.9 6.2 6.2 6.2l1-1.4-1.9-.9-.9.8a3.8 3.8 0 0 1-1.9-1.9l.8-.9-.9-1.9z" fill="currentColor" stroke="none"/>',
+		'facebook'  => '<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>',
+		'instagram' => '<rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4A4 4 0 1 1 12.6 8 4 4 0 0 1 16 11.4z"/><path d="M17.5 6.5h.01"/>',
+		'x'         => '<path d="M4 4l16 16M20 4 4 20"/>',
+		'tiktok'    => '<path d="M9 12a4 4 0 1 0 4 4V3a5 5 0 0 0 5 5"/>',
+		'linkedin'  => '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',
+		'youtube'   => '<path d="M22.5 6.4a2.8 2.8 0 0 0-2-2C18.9 4 12 4 12 4s-6.9 0-8.6.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 1 11.8a29 29 0 0 0 .4 5.3 2.8 2.8 0 0 0 2 2C5.1 19.5 12 19.5 12 19.5s6.9 0 8.6-.4a2.8 2.8 0 0 0 2-2 29 29 0 0 0 .4-5.3 29 29 0 0 0-.5-5.400z"/><path d="m9.800 15 5.700-3.300L9.800 8.500z"/>',
 		'spark'   => '<path d="m12 3 1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="m19 15 .8 2.2 2.2.8-2.2.8L19 21l-.8-2.2-2.2-.8 2.2-.8z"/>',
 		'bolt'    => '<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>',
 		'chart'   => '<path d="M3 3v18h18"/><path d="m7 15 4-5 3 3 5-7"/>',
@@ -97,7 +106,7 @@ function cognicore_address_html() {
 }
 
 add_shortcode( 'cognicore_address', function () {
-	return '<div class="office-card"><h3>' . esc_html( COGNICORE_COMPANY ) . '</h3><p>' . implode( '<br>', array_map( 'esc_html', cognicore_address_lines() ) ) . '</p><a class="link-arrow" href="' . esc_url( cognicore_maps_url() ) . '" target="_blank" rel="noopener">Open in Maps ' . cognicore_icon( 'arrow' ) . '</a>' . cognicore_contact_rows() . cognicore_whatsapp_button() . '</div>';
+	return '<div class="office-card"><h3>' . esc_html( COGNICORE_COMPANY ) . '</h3><p>' . implode( '<br>', array_map( 'esc_html', cognicore_address_lines() ) ) . '</p><a class="link-arrow" href="' . esc_url( cognicore_maps_url() ) . '" target="_blank" rel="noopener">Open in Maps ' . cognicore_icon( 'arrow' ) . '</a>' . cognicore_contact_rows() . cognicore_whatsapp_button() . cognicore_social_html( 'social-card' ) . '</div>';
 } );
 
 add_action( 'after_setup_theme', function () {
