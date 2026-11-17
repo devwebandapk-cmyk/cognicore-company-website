@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <section class="hero">
 	<div class="container">
-		<h1>Technology that moves your business forward.</h1>
-		<p>From hardware supply to software design, we connect businesses with the technology and products they need to grow.</p>
+		<h1>Complete technology solutions, from software to hardware.</h1>
+		<p>We advise, develop and deliver: custom software together with the hardware it runs on, so you have one dependable partner from design to deployment.</p>
 		<a class="btn" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Get in touch</a>
 		<a class="btn btn-ghost" href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Our activities</a>
 	</div>
@@ -11,7 +11,7 @@
 <section class="section">
 	<div class="container">
 		<h2>What we do</h2>
-		<p class="lead">Five areas of expertise, one dependable partner.</p>
+		<p class="lead">From expert advice to full deployment, everything under one roof.</p>
 		<div class="grid">
 			<?php foreach ( cognicore_activities() as $a ) : ?>
 				<div class="card"><h3><?php echo esc_html( $a[0] ); ?></h3><p><?php echo esc_html( $a[1] ); ?></p></div>

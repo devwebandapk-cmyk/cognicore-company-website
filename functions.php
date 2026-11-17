@@ -19,11 +19,13 @@ function cognicore_address_lines() {
 /** Licensed business activities (edit here). */
 function cognicore_activities() {
 	return array(
-		array( 'Wholesale Technology Supply', 'Bulk supply of computers, peripherals and software to resellers, enterprises and institutions.' ),
-		array( 'General Trading', 'Sourcing and distribution of a broad portfolio of goods, tailored to each client\'s requirements.' ),
-		array( 'Pre-Owned Electronics', 'Cost-effective trade in pre-owned electrical and electronic appliances, extending the working life of quality equipment.' ),
-		array( 'Digital Commerce', 'Online storefronts and sales channels that bring our products to customers wherever they are.' ),
-		array( 'Systems & Communications Software', 'Software designed for computer systems and communication equipment, built for performance and seamless integration.' ),
+		array( 'Integrated Solutions', 'End-to-end projects that combine custom software with custom-built or carefully selected hardware, delivered and supported by one team.' ),
+		array( 'Software Development', 'Retail billing, procurement management, service and facility management systems, and e-commerce platforms, built around how your business operates.' ),
+		array( 'IT & Software Consultancy', 'Expert guidance on technology strategy, system selection and software architecture, so you invest in the right solution from the start.' ),
+		array( 'Hardware Distribution', 'Printers, scanners, POS terminals, barcode scanners and related peripherals for retailers and enterprises.' ),
+		array( 'Digital Signage', 'Smart displays for supermarkets and parking facilities: advertising, live price boards, guidance and information screens.' ),
+		array( 'Pre-Owned Electronics Export', 'Export of quality pre-owned devices to growing markets in Africa.' ),
+		array( 'General Trading', 'Sourcing and distribution of a broad portfolio of goods, tailored to client requirements.' ),
 	);
 }
 
